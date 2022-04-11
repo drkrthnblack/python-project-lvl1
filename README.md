@@ -1,5 +1,6 @@
-### Hexlet tests and linter status:
+## Hexlet tests and linter status:
 [![Actions Status](https://github.com/drkrthnblack/python-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/drkrthnblack/python-project-lvl1/actions)
-### Code Climate:
+## Code Climate:
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![Flake8 workflow](https://github.com/drkrthnblack/python-project-lvl1/actions/workflows/flake8-check.yml/badge.svg)]
+## Flake8:
+![Flake8 workflow](https://github.com/drkrthnblack/python-project-lvl1/actions/workflows/flake8-check.yml/badge.svg)
