@@ -1,8 +1,7 @@
 import prompt
-from random import randint
 
-RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 
+QUESTIONS_COUNT = 3
 
 
 def welcome_user():
@@ -12,22 +11,13 @@ def welcome_user():
     return name
 
 
-def determine_question():
-    number = randint(0, 255)
-    print('Question: {}'.format(number))
-    return number
-
-
-def determine_correct_answer(number):
-    return 'yes' if number % 2 == 0 else 'no'
-
-
 def correct_answer_mode():
     print('Correct!')
 
 
 def wrong_answer_mode(answer, correct_answer):
-    print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(answer, correct_answer))
+    print("'{}' is wrong answer ;(. Correct answer was '{}'."
+          .format(answer, correct_answer))
 
 
 def ending(is_winner, name):
@@ -37,16 +27,13 @@ def ending(is_winner, name):
         print("Let's try again, {}!".format(name))
 
 
-questions_count = 3
-
-
-def run_game():
+def run_game(game):
     username = welcome_user()
-    print(RULES)
+    print(game.RULES)
     is_winner = True
-    for attempt in range(questions_count):
-        question = determine_question()
-        correct_answer = determine_correct_answer(question)
+    for attempt in range(QUESTIONS_COUNT):
+        question = game.determine_question()
+        correct_answer = game.determine_correct_answer(question)
         answer = prompt.string('Your answer: ')
         if answer == correct_answer:
             correct_answer_mode()
@@ -55,5 +42,3 @@ def run_game():
             wrong_answer_mode(answer, correct_answer)
             break
     ending(is_winner, username)
-
-#run_game()
